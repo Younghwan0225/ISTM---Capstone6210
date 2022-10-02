@@ -1,11 +1,10 @@
-package com.istm10.regestration;
+package com.istm10.service;
 
-import com.istm10.appUser.AppUerRole;
-import com.istm10.appUser.AppUser;
-import com.istm10.appUser.AppUserService;
-import com.istm10.email.EmailSender;
-import com.istm10.regestration.token.ConfirmationToken;
-import com.istm10.regestration.token.ConfirmationTokenService;
+import com.istm10.entity.AppUerRole;
+import com.istm10.entity.AppUser;
+import com.istm10.repository.EmailSender;
+import com.istm10.entity.RegistrationRequest;
+import com.istm10.entity.ConfirmationToken;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

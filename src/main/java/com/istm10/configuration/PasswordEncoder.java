@@ -1,4 +1,4 @@
-package com.istm10.security;
+package com.istm10.configuration;
 
 
 import org.springframework.context.annotation.Bean;

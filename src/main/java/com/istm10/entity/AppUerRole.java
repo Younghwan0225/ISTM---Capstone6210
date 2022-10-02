@@ -1,4 +1,4 @@
-package com.istm10.appUser;
+package com.istm10.entity;
 
 public enum AppUerRole {
     USER,

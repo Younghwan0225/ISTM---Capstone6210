@@ -1,5 +1,7 @@
-package com.istm10.regestration.token;
+package com.istm10.service;
 
+import com.istm10.entity.ConfirmationToken;
+import com.istm10.repository.ConfirmationTokeRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

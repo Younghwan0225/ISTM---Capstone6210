@@ -1,5 +1,6 @@
-package com.istm10.appUser;
+package com.istm10.entity;
 
+import com.istm10.entity.AppUerRole;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

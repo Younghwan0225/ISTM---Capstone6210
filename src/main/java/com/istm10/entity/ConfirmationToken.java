@@ -1,6 +1,6 @@
-package com.istm10.regestration.token;
+package com.istm10.entity;
 
-import com.istm10.appUser.AppUser;
+import com.istm10.entity.AppUser;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

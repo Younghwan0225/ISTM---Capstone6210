@@ -1,4 +1,4 @@
-package com.istm10.regestration;
+package com.istm10.service;
 
 import org.springframework.stereotype.Service;
 

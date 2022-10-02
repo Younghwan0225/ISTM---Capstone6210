@@ -1,8 +1,9 @@
-package com.istm10.regestration;
+package com.istm10.controller;
 
 
+import com.istm10.entity.RegistrationRequest;
+import com.istm10.service.RegistrationService;
 import lombok.AllArgsConstructor;
-import org.springframework.boot.autoconfigure.security.saml2.Saml2RelyingPartyProperties;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

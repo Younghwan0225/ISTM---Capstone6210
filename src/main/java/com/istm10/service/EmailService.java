@@ -1,5 +1,6 @@
-package com.istm10.email;
+package com.istm10.service;
 
+import com.istm10.repository.EmailSender;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 
 @Service
 @AllArgsConstructor
-public class EmailService implements EmailSender{
+public class EmailService implements EmailSender {
     private final static Logger LOGGER = LoggerFactory
             .getLogger(EmailService.class);
 
@@ -29,7 +30,7 @@ public class EmailService implements EmailSender{
             helper.setText(email, true);
             helper.setTo(to);
             helper.setSubject("Confirm your email");
-            helper.setFrom("GWVS@gwu.edu");
+            helper.setFrom("GWVP@gwu.edu");
             mailSender.send(mimeMessage);
         } catch (MessagingException e) {
             LOGGER.error("failed to send email", e);

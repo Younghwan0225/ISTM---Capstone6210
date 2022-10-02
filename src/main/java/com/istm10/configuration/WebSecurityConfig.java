@@ -1,8 +1,7 @@
-package com.istm10.security.config;
+package com.istm10.configuration;
 
-import com.istm10.appUser.AppUserService;
+import com.istm10.service.AppUserService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;

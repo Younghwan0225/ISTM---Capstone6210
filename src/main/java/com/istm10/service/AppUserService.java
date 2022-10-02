@@ -1,7 +1,8 @@
-package com.istm10.appUser;
+package com.istm10.service;
 
-import com.istm10.regestration.token.ConfirmationToken;
-import com.istm10.regestration.token.ConfirmationTokenService;
+import com.istm10.repository.AppUserRepository;
+import com.istm10.entity.AppUser;
+import com.istm10.entity.ConfirmationToken;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
