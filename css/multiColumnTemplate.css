@@ -255,7 +255,6 @@ body {
 }
 .container .secondary_header {
 }
-}
 
 @media (min-width: 321px) and (max-width: 768px) {
 .secondary_header ul li {
@@ -405,4 +404,19 @@ body {
 	opacity: 0.5;
 }
 #menu {
+}
+
+
+.reservation_details table caption{
+	caption-side:top;
+}
+.reservation_details table th{
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
+}
+.reservation_details table td{
+	text-align: center;
+	padding: 5px;
+	margin: 5px;
 }
