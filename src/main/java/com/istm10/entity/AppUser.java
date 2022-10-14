@@ -30,7 +30,7 @@ public class AppUser implements UserDetails {
             strategy = GenerationType.SEQUENCE,
             generator = "visitor_sequence"
     )
-    private Long id;
+    private Long user_id;
     private String firstname;
     private String lastname;
     private String email;
