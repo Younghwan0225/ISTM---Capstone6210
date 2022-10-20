@@ -1,5 +1,3 @@
-
-
 function storeTimeGarage() {
   var garage = document.getElementById("garageSelect").value;
 	var dateString = document.getElementById("startTime").value;
@@ -25,21 +23,19 @@ function storeTimeGarage() {
 function checkDate() {
   var dateString1 = document.getElementById("startDate").value;
   var dateString2 = document.getElementById("endDate").value;
-	var dateString3 = document.getElementById("startTime").value;
-	var dateString4 = document.getElementById("endTime").value;
-
-	var dateStart = new Date(dateString1);
-  var timeStart = new Date(dateString3);
-  var dateEnd = new Date(dateString2);
-  var timeEnd = new Date(dateString4);
+	var dateStart = new Date(dateString1).getTime();
+  var dateEnd = new Date(dateString2).getTime();
+  var startTime = $('#startTime').timepicker('getTime');
+  var endTime = $('#endTime').timepicker('getTime');
 
 	if (dateEnd < dateStart) {
-		alert("End date cannot be less than Start date.");
+		alert("The end date cannot be earlier than the start date.");
 		document.getElementById('endDate').value = "";
 		return false;
-	}else if(dateEnd = dateStart){
-    if(timeEnd < timeStart) {
-      alert("End time cannot be less than Start time.");
+  }
+  if(dateEnd == dateStart) {
+    if(endTime < startTime) {
+      alert("The end time cannot be earlier than the start time.");
       document.getElementById('endTime').value = "";
       return false;
     }
