@@ -1,3 +1,20 @@
+<?php
+if(isset($_POST['search'])){
+	session_start();
+	$_SESSION['startDate'] = $_POST['startDate'];
+	$_SESSION['startTime'] = $_POST['startTime'];
+	$_SESSION['endDate'] = $_POST['endDate'];
+	$_SESSION['endTime'] = $_POST['endTime'];
+	//test
+  echo $_SESSION['startDate'];
+	echo $_SESSION['startTime'];
+	echo $_SESSION['endDate'];
+	echo $_SESSION['endTime'];
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -68,12 +85,12 @@
 
 		<div class=" p-4 jumbotron jumbotron-fluid ">
 			<div class="container">
-				<form id="homeForm" class="needs-validation" novalidate>
+				<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="homeForm" class="needs-validation" novalidate>
 
 					<div class="row">
 						<div class="form-group col">
-							<label for="StartDate">From</label>
-							<input type="date" id="startDate"  min="2022-10-17" max="" class="form-control" name="StartDate" onchange="checkDate()"required>
+							<label for="startDate">From</label>
+							<input type="date" id="startDate"  min="2022-10-17" max="" class="form-control" name="startDate" onchange="checkDate()"required>
 							<div class="valid-feedback"></div>
 							<div class="invalid-feedback">
 								Please select arrival date.
@@ -109,7 +126,7 @@
 					</div>
 
 					<div class="homeButton">
-						<a id="searchButton" onclick="storeTimeGarage();" class="btn btn-primary">Search</a>
+						<input type="submit" name="search" value="Search" class="btn btn-primary">
 					</div>
 				</form>
 			</div>
