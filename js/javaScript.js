@@ -34,8 +34,8 @@ function checkDate() {
 		return false;
   }
   if(dateEnd == dateStart) {
-    if(endTime < startTime) {
-      alert("The end time cannot be earlier than the start time.");
+    if(endTime <= startTime) {
+      alert("The end time cannot be earlier than or equal to the start time.");
       document.getElementById('endTime').value = "";
       return false;
     }
