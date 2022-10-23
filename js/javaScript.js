@@ -32,3 +32,7 @@ function checkDate() {
 	}
 	return true;
 };
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
