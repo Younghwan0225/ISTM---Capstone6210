@@ -48,6 +48,32 @@
     <div class="upcoming-reservation">
       <div class="reservation_details col-xl-10">
         <h3>Upcoming Reservation</h3><br>
+        <?php
+          echo "<table style='border:solid 1px black;'>";
+          echo "<tr><th>Reservation ID</th><th>Garage name</th><th>Garage Location</th><th>arrival date</th><th>arrival time</th><th>total_charge</th>"
+          $checker = "localhost";
+          $username="ISTM6210";
+          $password= "Istm6210Test"
+          try{
+            $conn = new PDO("mysql:host=$servername;dbname=GWVP",$username,$password);
+
+            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDD::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+            $stmt= $conn ->prepare("SELECT rd.reservation_id,g.garage_name,g.garagae_location,
+            rd.arrival_date,rd.arrival_time,rd.total_charge From reservations rd inner join garage g On rd.garage_id = g.garage_id where reservation_status='upcoming' ")
+            $stmt ->execute();
+
+            $result = $stmt ->setFetchMode(PDO::FETCH_ASSOC);
+            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+              echo $v;
+            }
+            echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+          }
+          $conn=null;
+          echo "</table>";
+        ?>
 		   <div class="row justify-content-center">
       <div class="col-8 text center col-xl-12">
         <p class="text muted my-4"> Nothing for now </p>
@@ -63,12 +89,64 @@
 	  <div class="in-process-reservation col-xl-10">
 	  	<div class="reservation_details col-xl-5">
 		  <h3>In-Process Reservation</h3><br>
+        <?php
+          echo "<table style='border:solid 1px black;'>";
+          echo "<tr><th>Reservation ID</th><th>Garage name</th><th>Garage Location</th><th>arrival date</th><th>arrival time</th><th>total_charge</th>"
+          $checker = "localhost";
+          $username="ISTM6210";
+          $password= "Istm6210Test"
+          try{
+            $conn = new PDO("mysql:host=$servername;dbname=GWVP",$username,$password);
+
+            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDD::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+            $stmt= $conn ->prepare("SELECT rd.reservation_id,g.garage_name,g.garagae_location,
+            rd.arrival_date,rd.arrival_time,rd.total_charge From reservations rd inner join garage g On rd.garage_id = g.garage_id where reservation_status='in-process' ")
+            $stmt ->execute();
+
+            $result = $stmt ->setFetchMode(PDO::FETCH_ASSOC);
+            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+              echo $v;
+            }
+            echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+          }
+          $conn=null;
+          echo "</table>";
+        ?>
 		  </div>	
 	  </div>
 	  
 	  <div class="finished-Reservation">
 	  	<div class="reservation_details col-xl-10">
 		  <h3 class="col-xl-5">Finished Reservation</h3><br>
+      <?php
+          echo "<table style='border:solid 1px black;'>";
+          echo "<tr><th>Reservation ID</th><th>Garage name</th><th>Garage Location</th><th>arrival date</th><th>arrival time</th><th>total_charge</th>"
+          $checker = "localhost";
+          $username="ISTM6210";
+          $password= "Istm6210Test"
+          try{
+            $conn = new PDO("mysql:host=$servername;dbname=GWVP",$username,$password);
+
+            $conn -> setAttribute(PDO::ATTR_ERRMODE,PDD::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+            $stmt= $conn ->prepare("SELECT rd.reservation_id,g.garage_name,g.garagae_location,
+            rd.arrival_date,rd.arrival_time,rd.total_charge From reservations rd inner join garage g On rd.garage_id = g.garage_id where reservation_status='passed' ")
+            $stmt ->execute();
+
+            $result = $stmt ->setFetchMode(PDO::FETCH_ASSOC);
+            foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+              echo $v;
+            }
+            echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+          }
+          $conn=null;
+          echo "</table>";
+        ?>
 		  </div>	
 	  </div>
     <!-- Modal -->
